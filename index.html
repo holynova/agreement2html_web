@@ -61,12 +61,20 @@
       padding: 10px 40px;
     }
 
-    label {
+    label.part-label {
+      font-size: 1.5rem;
+      font-weight: bold;
       display: block;
       color: #4a78da;
       margin-top: 1rem;
     }
 
+    .radio-group{
+      margin: 0.5rem 0;
+    }
+    .radio-group label{
+      padding-right: 1rem;
+    }
     textarea {
       padding: 1rem;
       width: 100%;
@@ -90,16 +98,27 @@
 
       </ul>
     </div>
-    <div class="form-item">
 
-      <label for="input">协议文本</label>
+    <div class="form-item">
+      <label class="part-label" for="input">协议文本</label>
+      <div class="radio-group">
+        <!-- <div class="form-item"> -->
+        <input type="radio" id="plain" name="inputType" value="plain" checked>
+        <label for="plain">纯文本</label>
+        <!-- </div> -->
+        <!-- <div class="form-item"> -->
+        <input type="radio" id="markdown" name="inputType" value="markdown">
+        <label for="markdown">markdown</label>
+      </div>
+
+      <!-- </div>    -->
       <textarea name="input" id='input' class="input" cols="30" rows="10" placeholder="请输入协议文本"></textarea>
     </div>
     <div>
       <button class="btn">convert to html</button>
     </div>
     <div class="form-item">
-      <label for="output">结果HTML</label>
+      <label for="output" class="part-label">结果HTML</label>
       <textarea name="output" id='output' class="output" cols="30" rows="10"></textarea>
     </div>
     <!-- <iframe frameborder="0">
