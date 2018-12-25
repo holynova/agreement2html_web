@@ -48,6 +48,7 @@ function convert(text) {
 function main() {
   // log('ready')
   let input = document.getElementById('input')
+  input.focus()
   let output = document.getElementById('output')
   // log(input.value)
   let btn = document.querySelector('.btn')

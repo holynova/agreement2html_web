@@ -5,19 +5,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>agreement to html converter</title>
   <style>
+    /* //背景灰色
+#f1f1f1
+//灰色文字
+#9a9a9a
+蓝色文字
+#4a78da
+
+//谷歌浅蓝
+#3367d6
+谷歌深蓝
+#2850a7 */
+    html {
+      font-size: 14px;
+      background-color: #f1f1f1;
+
+    }
+
     * {
       padding: 0;
       margin: 0;
+      font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
 
 
     .wrapper {
+
+
       width: 80%;
       max-width: 800px;
       margin: 0 auto;
+      padding-top: 2rem;
     }
+
+    .feature {
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      /* padding-left: 2rem; */
+    }
+
+
+    ul li {
+      /* line-height: 1.5; */
+
+    }
+
 
     .btn {
       min-width: 100px;
@@ -27,12 +63,15 @@
 
     label {
       display: block;
-
+      color: #4a78da;
+      margin-top: 1rem;
     }
 
     textarea {
       padding: 1rem;
       width: 100%;
+      resize: none;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -40,6 +79,17 @@
 <body>
   <div class="wrapper">
     <h1>协议转html</h1>
+    <div class="feature">
+      <h3>特点和规则</h3>
+      <ul>
+        <li>自动转换, 带样式</li>
+        <li>兼容电脑和移动端</li>
+        <li>第一行默认为一级标题</li>
+        <li>阿拉伯数字 + 中文顿号(<code>、</code>) = 带自动数字序号的列表</li>
+        <li>汉字数字 + 中文顿号(<code>、</code>) = 二级标题</li>
+
+      </ul>
+    </div>
     <div class="form-item">
 
       <label for="input">协议文本</label>
@@ -49,7 +99,7 @@
       <button class="btn">convert to html</button>
     </div>
     <div class="form-item">
-      <label for="output">html</label>
+      <label for="output">结果HTML</label>
       <textarea name="output" id='output' class="output" cols="30" rows="10"></textarea>
     </div>
     <!-- <iframe frameborder="0">
